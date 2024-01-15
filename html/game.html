@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game - Mata Mosquito</title>
+        <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+        <script src="../js/script.js"></script>
+    </head>
+    <body onresize="ajustaPalcoJogo()"><!--Assim que o body mudar de tamanho ira acionar a função.-->
+        <div class="painel">
+            <div class="vidas">
+                <img id="v1" src="../Imagens/coracao_cheio.png" alt="">
+                <img id="v2" src="../Imagens/coracao_cheio.png" alt="">
+                <img id="v3" src="../Imagens/coracao_cheio.png" alt="">
+            </div>
+            <div class="cronometro">
+                <span>Tempo Restante:</span>
+                <span id="tempo"></span>
+            </div>
+            <div class="pontos">
+                <span>Kils:</span>
+                <span id="ponto">0</span>
+            </div>
+        </div>
+        
+        <script>
+            document.getElementById('tempo').innerHTML = tempo/*exibir o valor tempo na tag antes de execultar a função*/
+            var criaMosquito = setInterval(function(){
+                positionRandom()
+            }, nivelPadrao)
+        </script>
+    </body>
+</html>
